@@ -3773,6 +3773,44 @@ void EditorNode::_update_layouts_menu() {
 		editor_layouts->add_item(layout);
 	}
 }
+//added for homework
+void EditorNode::_hexcode_menu_option(int p_id) {
+
+	switch (p_id) {
+
+		case TOMMY_WINDERWEEDLE: {
+
+			current_option = p_id;
+			layout_dialog->set_title(TTR("Thomas Winderweedle"));
+         layout_dialog->get_ok()->set_text(TTR("Tommy"));
+			layout_dialog->popup_centered();
+		} break;
+		case JOSIAS_MOUKPE: {
+
+			current_option = p_id;
+			layout_dialog->set_title(TTR("Josias Moukpe"));
+         layout_dialog->get_ok()->set_text(TTR("Josias"));
+			layout_dialog->popup_centered();
+		} break;
+		case SETTINGS_LAYOUT_DEFAULT: {
+
+			_load_docks_from_config(default_layout, "docks");
+			_save_docks();
+		} break;
+		default: {
+
+			Ref<ConfigFile> config;
+			config.instance();
+			Error err = config->load(EditorSettings::get_singleton()->get_editor_layouts_config());
+			if (err != OK) {
+				return; //no config
+			}
+
+			_load_docks_from_config(config, editor_layouts->get_item_text(p_id));
+			_save_docks();
+		}
+	}
+}
 
 void EditorNode::_layout_menu_option(int p_id) {
 
@@ -5217,7 +5255,7 @@ EditorNode::EditorNode() {
 	p->set_hide_on_window_lose_focus(true);
 	p->add_item(TTR("Editor Settings"), SETTINGS_PREFERENCES);
 	p->add_separator();
-
+   //***********************************************************************************
 	editor_layouts = memnew(PopupMenu);
 	editor_layouts->set_name("Layouts");
 	p->add_child(editor_layouts);
@@ -5261,6 +5299,18 @@ EditorNode::EditorNode() {
 	p->add_icon_item(gui_base->get_icon("Instance", "EditorIcons"), TTR("Community"), HELP_COMMUNITY);
 	p->add_separator();
 	p->add_icon_item(gui_base->get_icon("Godot", "EditorIcons"), TTR("About"), HELP_ABOUT);
+   //added for homework
+   p->add_separator();
+   hexcode_experts = memnew(PopupMenu);
+	hexcode_experts->set_name("Experts");
+	p->add_child(hexcode_experts);
+	hexcode_experts->connect("id_pressed", this, "_hexcode_menu_option");
+	p->add_submenu_item(TTR("0xCODE Experts"), "Experts");
+   hexcode_experts->add_item(TTR("Tommy Winderweedle"), TOMMY_WINDERWEEDLE);
+   hexcode_experts->add_item(TTR("Josias Moukpe"), JOSIAS_MOUKPE);
+   hexcode_experts->add_item(TTR("Fahad Aljohar"), JOSIAS_MOUKPE);
+   hexcode_experts->add_item(TTR("Abdullah Alsulaiman"), JOSIAS_MOUKPE);
+	//p->add_icon_item(gui_base->get_icon("Godot", "EditorIcons"), TTR("Tommy Winderweedle"), HELP_ABOUT);
 
 	play_cc = memnew(CenterContainer);
 	play_cc->set_mouse_filter(Control::MOUSE_FILTER_IGNORE);

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['add_5flibrary',['add_library',['../namespacemethods.html#a4a9367c02d287471ee702c1c97bb1c41',1,'methods']]],
+  ['add_5fmodule_5fversion_5fstring',['add_module_version_string',['../namespacemethods.html#ae690cfe8aaca5ea08fdf0967fb33cd39',1,'methods']]],
+  ['add_5fprogram',['add_program',['../namespacemethods.html#acc7101fdd865e8e04b89338d2ce232e0',1,'methods']]],
+  ['add_5fshared_5flibrary',['add_shared_library',['../namespacemethods.html#aa89bd3e8f32461c212a343a099e5f9f4',1,'methods']]],
+  ['add_5fsource_5ffiles',['add_source_files',['../namespacemethods.html#ad51ce88844807b842e78735013f9b3a7',1,'methods']]],
+  ['android_5fadd_5faidl_5fdir',['android_add_aidl_dir',['../namespacemethods.html#a41dc0d592105462cf586dcf3724398d4',1,'methods']]],
+  ['android_5fadd_5fasset_5fdir',['android_add_asset_dir',['../namespacemethods.html#a7f5ab15616d5814c80bd508d30e96e7a',1,'methods']]],
+  ['android_5fadd_5fdefault_5fconfig',['android_add_default_config',['../namespacemethods.html#ab056eeec5a31945f9e975dc9559540f0',1,'methods']]],
+  ['android_5fadd_5fdependency',['android_add_dependency',['../namespacemethods.html#a3f469006a68d7d8d40777494ed0b5553',1,'methods']]],
+  ['android_5fadd_5fflat_5fdir',['android_add_flat_dir',['../namespacemethods.html#aa359117b59d8a9d5310eba5a7c6ca76f',1,'methods']]],
+  ['android_5fadd_5fgradle_5fclasspath',['android_add_gradle_classpath',['../namespacemethods.html#a2136cee9aeded6b3d55569ca5ffc6111',1,'methods']]],
+  ['android_5fadd_5fgradle_5fplugin',['android_add_gradle_plugin',['../namespacemethods.html#ae9e11218e2f50cdf62d997b3e31a23b5',1,'methods']]],
+  ['android_5fadd_5fjava_5fdir',['android_add_java_dir',['../namespacemethods.html#a04b8b12d5c488815fe019ff8a6c6807f',1,'methods']]],
+  ['android_5fadd_5fjni_5fdir',['android_add_jni_dir',['../namespacemethods.html#a5913c99fbe6aee80bd0aff8b81070088',1,'methods']]],
+  ['android_5fadd_5fmaven_5frepository',['android_add_maven_repository',['../namespacemethods.html#ae8c0c9dc06ef8dff1d6960c9782c48ba',1,'methods']]],
+  ['android_5fadd_5fres_5fdir',['android_add_res_dir',['../namespacemethods.html#a081823393555f28854cea46dd24c880d',1,'methods']]],
+  ['android_5fadd_5fto_5fattributes',['android_add_to_attributes',['../namespacemethods.html#ad8ccc980f4d1218d135288142d9771d4',1,'methods']]],
+  ['android_5fadd_5fto_5fmanifest',['android_add_to_manifest',['../namespacemethods.html#aca85941dd65eb8b3b4c9d8ca3b167576',1,'methods']]],
+  ['android_5fadd_5fto_5fpermissions',['android_add_to_permissions',['../namespacemethods.html#ae0afaa3842f0eb638fc2668583039a0d',1,'methods']]]
+];

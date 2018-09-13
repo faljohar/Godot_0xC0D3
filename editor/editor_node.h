@@ -185,6 +185,8 @@ private:
 		HELP_ISSUES,
 		HELP_COMMUNITY,
 		HELP_ABOUT,
+      TOMMY_WINDERWEEDLE,
+      JOSIAS_MOUKPE,
 
 		SET_VIDEO_DRIVER_SAVE_AND_RESTART,
 
@@ -244,6 +246,7 @@ private:
 	MenuButton *project_menu;
 	MenuButton *debug_menu;
 	MenuButton *settings_menu;
+   PopupMenu *hexcode_experts;
 	MenuButton *help_menu;
 	PopupMenu *tool_menu;
 	ToolButton *export_button;
@@ -556,6 +559,7 @@ private:
 
 	void _update_layouts_menu();
 	void _layout_menu_option(int p_id);
+   void _hexcode_menu_option(int p_id);
 
 	void _clear_undo_history();
 
