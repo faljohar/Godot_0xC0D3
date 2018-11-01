@@ -76,7 +76,7 @@ void ImportDock::set_edit_path(const String &p_path) {
 
 	Ref<ConfigFile> config;
 	config.instance();
-	Error err = config->load(p_path + ".import");
+	Error err = config->load(p_path + ".cache");
 	if (err != OK) {
 		clear();
 		return;
@@ -168,7 +168,7 @@ void ImportDock::set_edit_multiple_paths(const Vector<String> &p_paths) {
 
 		Ref<ConfigFile> config;
 		config.instance();
-		Error err = config->load(p_paths[i] + ".import");
+		Error err = config->load(p_paths[i] + ".cache");
 		ERR_CONTINUE(err != OK);
 
 		if (i == 0) {
@@ -279,7 +279,7 @@ void ImportDock::_importer_selected(int i_idx) {
 	Ref<ConfigFile> config;
 	if (params->paths.size()) {
 		config.instance();
-		Error err = config->load(params->paths[0] + ".import");
+		Error err = config->load(params->paths[0] + ".cache");
 		if (err != OK) {
 			config.unref();
 		}
@@ -357,7 +357,7 @@ void ImportDock::_reimport() {
 
 		Ref<ConfigFile> config;
 		config.instance();
-		Error err = config->load(params->paths[i] + ".import");
+		Error err = config->load(params->paths[i] + ".cache");
 		ERR_CONTINUE(err != OK);
 
 		config->set_value("remap", "importer", params->importer->get_importer_name());
@@ -367,7 +367,7 @@ void ImportDock::_reimport() {
 			config->set_value("params", E->get().name, params->values[E->get().name]);
 		}
 
-		config->save(params->paths[i] + ".import");
+		config->save(params->paths[i] + ".cache");
 	}
 
 	EditorFileSystem::get_singleton()->reimport_files(params->paths);
